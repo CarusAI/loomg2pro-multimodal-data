@@ -1,6 +1,6 @@
 # LoomG2pro Multimodal Samples: Quality Assessment and Release Notes
 
-[Chinese version](README.zh-CN.md)
+
 
 **Status: An inspected subset with known missing values. The complete delivery has not passed acceptance checks.**
 
