@@ -1,0 +1,322 @@
+{
+  "files": {
+    "left": "mocap/left.h5",
+    "right": "mocap/right.h5"
+  },
+  "skeleton_layout": [
+    20,
+    7
+  ],
+  "fields": {
+    "skeleton": {
+      "description": "Positions and orientations of 20 hand nodes in the SDK model frame.",
+      "shape": [
+        1228,
+        20,
+        7
+      ],
+      "dtype": "float32",
+      "unit": [
+        "m",
+        "m",
+        "m",
+        "dimensionless",
+        "dimensionless",
+        "dimensionless",
+        "dimensionless"
+      ],
+      "component_order": [
+        "px",
+        "py",
+        "pz",
+        "qw",
+        "qx",
+        "qy",
+        "qz"
+      ],
+      "coordinate_frame": "mocap_model"
+    },
+    "wrist_quat": {
+      "description": "Orientation of SDK node 0 (palm/wrist root) relative to the SDK model frame; equivalent to skeleton[:, 0, 3:7].",
+      "shape": [
+        1228,
+        4
+      ],
+      "dtype": "float32",
+      "unit": "dimensionless",
+      "component_order": [
+        "w",
+        "x",
+        "y",
+        "z"
+      ],
+      "coordinate_frame": "mocap_model"
+    }
+  },
+  "coordinate_frame": "mocap_model: mHandPro SDK model reference frame shared by both hands, initialized using WS_Geo; positions in meters.",
+  "calibration": {
+    "ppose_applied": true,
+    "apply_ppose_on_read": false,
+    "parameters": {
+      "left": {
+        "NODE0": [
+          0.7922,
+          0.0413,
+          0.1691,
+          -0.585
+        ],
+        "NODE1": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE2": [
+          0.9115,
+          0.1206,
+          -0.1796,
+          -0.3497
+        ],
+        "NODE3": [
+          0.7785,
+          0.2092,
+          -0.2132,
+          -0.552
+        ],
+        "NODE4": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE5": [
+          0.8757,
+          0.1328,
+          0.0488,
+          -0.4617
+        ],
+        "NODE6": [
+          0.8724,
+          0.1748,
+          -0.0992,
+          -0.4455
+        ],
+        "NODE7": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE8": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE9": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE10": [
+          0.717,
+          0.0502,
+          0.276,
+          -0.6382
+        ],
+        "NODE11": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE12": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE13": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE14": [
+          0.7011,
+          0.194,
+          0.2266,
+          -0.6476
+        ],
+        "NODE15": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE16": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE17": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE18": [
+          0.6656,
+          -0.2347,
+          0.1601,
+          -0.6901
+        ],
+        "NODE19": [
+          0.9932,
+          0.0,
+          0.0,
+          0.116
+        ],
+        "NODE0Y": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "right": {
+        "NODE0": [
+          0.8001,
+          -0.069,
+          -0.0602,
+          0.5928
+        ],
+        "NODE1": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE2": [
+          0.9432,
+          0.1351,
+          0.0455,
+          0.3
+        ],
+        "NODE3": [
+          0.8326,
+          0.2451,
+          0.2914,
+          0.4022
+        ],
+        "NODE4": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE5": [
+          0.7958,
+          0.0093,
+          0.0307,
+          0.6047
+        ],
+        "NODE6": [
+          0.8768,
+          0.1127,
+          -0.0844,
+          0.4599
+        ],
+        "NODE7": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE8": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE9": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE10": [
+          0.7959,
+          0.1103,
+          -0.1387,
+          0.5789
+        ],
+        "NODE11": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE12": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE13": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE14": [
+          0.7559,
+          0.1142,
+          -0.1892,
+          0.6162
+        ],
+        "NODE15": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE16": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE17": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE18": [
+          0.5388,
+          -0.0455,
+          -0.2101,
+          0.8146
+        ],
+        "NODE19": [
+          -0.116,
+          0.0,
+          0.0,
+          0.9932
+        ],
+        "NODE0Y": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "timeline": {
+    "source": "meta/timeline/sync.parquet"
+  }
+}

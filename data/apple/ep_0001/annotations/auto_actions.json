@@ -1,0 +1,59 @@
+{
+  "actions": [
+    {
+      "label": "The apples and plate are initially on the table; the left hand moves to the first apple.",
+      "start": 1,
+      "end": 198
+    },
+    {
+      "label": "The left hand grasps the first apple and moves it above the plate.",
+      "start": 199,
+      "end": 322
+    },
+    {
+      "label": "The left hand releases the apple onto the plate, then moves to the second apple.",
+      "start": 323,
+      "end": 423
+    },
+    {
+      "label": "The left hand grasps the second apple and moves it above the plate.",
+      "start": 424,
+      "end": 572
+    },
+    {
+      "label": "The left hand releases the apple onto the plate, then moves to the third apple.",
+      "start": 573,
+      "end": 653
+    },
+    {
+      "label": "The left hand grasps the third apple and moves it above the plate.",
+      "start": 654,
+      "end": 801
+    },
+    {
+      "label": "The left hand releases the apple onto the plate; the right hand moves to the fourth apple.",
+      "start": 802,
+      "end": 856
+    },
+    {
+      "label": "The right hand grasps the apple and moves it above the plate.",
+      "start": 857,
+      "end": 968
+    },
+    {
+      "label": "The right hand releases the apple onto the plate, then moves to the fifth apple.",
+      "start": 969,
+      "end": 1015
+    },
+    {
+      "label": "The right hand grasps the fifth apple and moves it above the plate.",
+      "start": 1016,
+      "end": 1110
+    },
+    {
+      "label": "The right hand releases the apple onto the plate, completing the placement.",
+      "start": 1111,
+      "end": 1227
+    }
+  ]
+}

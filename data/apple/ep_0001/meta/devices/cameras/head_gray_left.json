@@ -1,0 +1,56 @@
+{
+  "stream_id": "head_gray_left",
+  "video_file": "camera/head_gray_left.mp4",
+  "resolution": [
+    1280,
+    800
+  ],
+  "encoding": {
+    "codec": "h264",
+    "container": "mp4"
+  },
+  "frame_count": 1228,
+  "image_state": {
+    "distorted": true,
+    "rectified": false
+  },
+  "intrinsics": {
+    "K": [
+      [
+        562.058349609375,
+        0.0,
+        645.543701171875
+      ],
+      [
+        0.0,
+        561.9826049804688,
+        391.23651123046875
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion_model": "CameraModel.Perspective",
+    "distortion": [
+      5.702889442443848,
+      1.688762903213501,
+      0.0002745336387306452,
+      4.091042865184136e-05,
+      0.022210756316781044,
+      6.073073863983154,
+      3.440810441970825,
+      0.21461807191371918,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.005069555714726448,
+      -0.0004058621125295758
+    ]
+  },
+  "timeline": {
+    "source": "meta/timeline/sync.parquet"
+  }
+}
