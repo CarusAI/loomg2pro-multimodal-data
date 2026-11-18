@@ -21,6 +21,8 @@ Depth is stored in millimeters in `head_depth/`, with zero marking invalid pixel
 
 ![Five camera views, depth and tactile traces from the apple demonstration](assets/apple-preview.jpg)
 
+![Left and right hand motion capture skeletons with nodes numbered 0–19](assets/mocap_20_nodes_en.png)
+
 
 ## Download
 
