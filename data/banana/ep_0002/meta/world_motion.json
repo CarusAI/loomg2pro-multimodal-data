@@ -1,0 +1,187 @@
+{
+  "coordinate_frame": "gravity_aligned_world_z_up_m",
+  "head_frame": "raw_stereo_left",
+  "table_from_world": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "left_initial_world_from_mocap": [
+    [
+      0.9975842002994949,
+      0.04809254387813142,
+      -0.05012854013581383
+    ],
+    [
+      -0.030773229101784816,
+      0.9528818565307706,
+      0.30177669867821433
+    ],
+    [
+      0.062279785512371205,
+      -0.2995050495697905,
+      0.9520598476979962
+    ]
+  ],
+  "right_initial_world_from_mocap": [
+    [
+      0.9791764751508948,
+      0.19764076712239975,
+      0.04638488635685863
+    ],
+    [
+      -0.20251517404984173,
+      0.9349891727994999,
+      0.2911749491753536
+    ],
+    [
+      0.014178673796644602,
+      -0.2945053037196049,
+      0.9555446568792022
+    ]
+  ],
+  "fields": {
+    "head_position_m": {
+      "description": "Head stereo left camera position in world coordinates, in meters.",
+      "shape": [
+        658,
+        3
+      ],
+      "dtype": "float64",
+      "unit": "m",
+      "component_order": [
+        "x",
+        "y",
+        "z"
+      ],
+      "coordinate_frame": "table_world_z_up_m"
+    },
+    "head_quaternion_xyzw": {
+      "description": "Head stereo left camera orientation in world coordinates, in x, y, z, w order.",
+      "shape": [
+        658,
+        4
+      ],
+      "dtype": "float64",
+      "unit": "dimensionless",
+      "component_order": [
+        "x",
+        "y",
+        "z",
+        "w"
+      ],
+      "from_frame": "raw_stereo_left",
+      "to_frame": "table_world_z_up_m",
+      "rotation_convention": "Rotates vectors from the raw stereo left camera frame into the world frame."
+    },
+    "left_world_m": {
+      "description": "Positions of 20 left-hand nodes in world coordinates, in meters.",
+      "shape": [
+        658,
+        20,
+        3
+      ],
+      "dtype": "float64",
+      "unit": "m",
+      "component_order": [
+        "x",
+        "y",
+        "z"
+      ],
+      "coordinate_frame": "table_world_z_up_m"
+    },
+    "right_world_m": {
+      "description": "Positions of 20 right-hand nodes in world coordinates, in meters.",
+      "shape": [
+        658,
+        20,
+        3
+      ],
+      "dtype": "float64",
+      "unit": "m",
+      "component_order": [
+        "x",
+        "y",
+        "z"
+      ],
+      "coordinate_frame": "table_world_z_up_m"
+    },
+    "hand_anchor_m": {
+      "description": "Left and right wrist-point positions in world coordinates, in meters.",
+      "shape": [
+        658,
+        2,
+        3
+      ],
+      "dtype": "float64",
+      "unit": "m",
+      "component_order": [
+        "x",
+        "y",
+        "z"
+      ],
+      "coordinate_frame": "table_world_z_up_m",
+      "hand_order": [
+        "left",
+        "right"
+      ]
+    },
+    "wrist_depth_rgb_m": {
+      "description": "Left and right wrist-point optical-axis Z depth in the head RGB camera frame, in meters.",
+      "shape": [
+        658,
+        2
+      ],
+      "dtype": "float64",
+      "unit": "m",
+      "coordinate_frame": "head_RGB",
+      "hand_order": [
+        "left",
+        "right"
+      ]
+    },
+    "wrist_marker_uv_px": {
+      "description": "Left and right wrist tracking points in the original head RGB image, in u, v pixel coordinates.",
+      "shape": [
+        658,
+        2,
+        2
+      ],
+      "dtype": "float32",
+      "unit": "px",
+      "component_order": [
+        "u",
+        "v"
+      ],
+      "coordinate_frame": "head_RGB_image",
+      "hand_order": [
+        "left",
+        "right"
+      ]
+    }
+  },
+  "timeline": {
+    "source": "meta/timeline/sync.parquet"
+  }
+}

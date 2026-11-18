@@ -1,0 +1,21 @@
+{
+  "hand": "left",
+  "files": {
+    "data": "tactile/left.h5"
+  },
+  "channels": 1125,
+  "dtype": "uint8",
+  "unit": "ADC",
+  "layout": {
+    "id": "loom_g2_tac_002_sw_layout_20260728",
+    "channel_map": null,
+    "calibration_order": null
+  },
+  "calibration": {
+    "zero_offset": null,
+    "applied": false
+  },
+  "timeline": {
+    "source": "meta/timeline/sync.parquet"
+  }
+}
