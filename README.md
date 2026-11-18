@@ -10,7 +10,7 @@ Four human demonstrations of tabletop manipulation, one episode per object. Each
 | Block | [ep_0002](data/block/ep_0002/) | 596 |
 | Cup | [ep_0005](data/cup/ep_0005/) | 559 |
 
-![Five camera views, depth and tactile traces from the apple demonstration](assets/apple-preview.jpg)
+
 
 ## Explore an episode
 
@@ -20,6 +20,7 @@ Depth is stored in millimeters in `head_depth/`, with zero marking invalid pixel
 
 
 ![Five camera views, depth and tactile traces from the apple demonstration](assets/apple-preview.jpg)
+
 
 ## Download
 
