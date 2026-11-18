@@ -18,6 +18,10 @@ Start with `camera/head_RGB.mp4` for the first-person view. The same folder hold
 
 Depth is stored in millimeters in `head_depth/`, with zero marking invalid pixels. The hand motion capture files in `mocap/` contain 20 nodes per hand. Head and hand trajectories in `world_pose/` use meters. Tactile values in `tactile/` are ADC readings. Apple has 1,132 channels per hand and the other three samples have 1,125. Consult each episode’s tactile layout before comparing channels.
 
+Head and hand positions in `world_pose/` are expressed in meters. The head IMU file,`imu/head_imu.h5`, stores one orientation quaternion per delivered frame in
+`aligned/orientation`, in `(x, y, z, w)` order. Each quaternion rotates vectors from the current IMU sensor frame into the sensor frame of the episode’s first
+raw IMU sample. Frame 0 has no valid orientation in any of the four samples.
+
 
 ![Five camera views, depth and tactile traces from the apple demonstration](assets/apple-preview.jpg)
 
@@ -34,13 +38,18 @@ git lfs pull
 ```
 
 
-
 ## Assessment scope
 
 The four episodes listed above contain 3,041 frames in total. They were selected from a 147-episode source delivery. An earlier quality review covered 120 episodes, including these four. The complete archive subsequently passed the 7-Zip extraction check after volume 012 was replaced. Volume 004 still differs from the supplier’s SHA-256 table in its final digit. The earlier sensor-quality review did not cover the 27 subsequently recovered cup episodes.
 
 ## Quality and reuse
 
-All four samples have a missing IMU orientation at frame 0. Action annotations begin at frame 1. In each of the four episodes, one frame per hand contains missing world-space coordinates. Apply a separate validity mask for each hand before calculating velocities or using trajectories as training targets. Video checks covered reported frame counts and decoding at the beginning, middle and end of each video. Five frames per episode were sampled for depth coverage. The shared frame index supports aligned playback. Acquisition timing offsets, geometric accuracy and robot retargeting have yet to be independently validated.
+For all four episodes, video frame counts matched the episode metadata. We decoded the first, middle and last frame of each video and sampled five depth frames per
+episode to measure nonzero pixel coverage. These checks support frame-indexed playback. Acquisition-time offsets and metric depth accuracy remain unverified.
+
+In each episode, `left_world_m` and `right_world_m` each contain one frame with non-finite coordinates. Mask invalid values separately for each hand. When
+computing velocity, require valid positions at both ends of each frame interval. Action annotations use inclusive frame indices and begin at frame 1.
+
+The samples contain human demonstrations. Robot action commands, a retargeting mapping and robot execution results are outside the scope of this release.
 
 Each episode includes the source license (CC BY-NC-SA 4.0). See the [license accompanying the apple sample](data/apple/ep_0001/LICENSE).
