@@ -1,0 +1,9 @@
+{
+  "schema_version": 3,
+  "episode_uuid": "7dfaa483-fb0e-4843-86d2-c74e85900b1c",
+  "frame_count": 559,
+  "delivery_rate_hz": 30,
+  "frame_index_base": 0,
+  "path_base": "episode_root",
+  "episode_id": "ep_0005"
+}

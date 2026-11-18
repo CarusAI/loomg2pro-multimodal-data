@@ -1,0 +1,29 @@
+{
+  "actions": [
+    {
+      "label": "The block is initially on the table.",
+      "start": 1,
+      "end": 187
+    },
+    {
+      "label": "The right hand grasps and lifts the block.",
+      "start": 188,
+      "end": 333
+    },
+    {
+      "label": "Both hands hold the block during the handover.",
+      "start": 334,
+      "end": 355
+    },
+    {
+      "label": "The right hand releases the block; the left hand moves it to the target box.",
+      "start": 356,
+      "end": 504
+    },
+    {
+      "label": "The left hand releases the block into the target box.",
+      "start": 505,
+      "end": 595
+    }
+  ]
+}

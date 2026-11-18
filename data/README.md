@@ -1,5 +1,6 @@
-# Data
+# Sample data
 
-Browse the [apple episodes](apple/).
-
-Browse the [banana episodes](banana/).
+- [Apple](apple/)
+- [Banana](banana/)
+- [Block](block/)
+- [Cup](cup/)

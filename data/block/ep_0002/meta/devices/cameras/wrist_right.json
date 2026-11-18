@@ -1,0 +1,56 @@
+{
+  "stream_id": "wrist_right",
+  "video_file": "camera/wrist_right.mp4",
+  "resolution": [
+    1280,
+    720
+  ],
+  "encoding": {
+    "codec": "h264",
+    "container": "mp4"
+  },
+  "frame_count": 596,
+  "image_state": {
+    "distorted": true,
+    "rectified": false
+  },
+  "intrinsics": {
+    "K": [
+      [
+        561.370361328125,
+        0.0,
+        640.04736328125
+      ],
+      [
+        0.0,
+        561.5563354492188,
+        365.6709899902344
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "distortion_model": "CameraModel.Perspective",
+    "distortion": [
+      0.21913990378379822,
+      -0.04319635406136513,
+      -0.0005678716115653515,
+      -0.0005991084035485983,
+      -0.0009338298696093261,
+      0.5386068820953369,
+      -0.041990917176008224,
+      -0.007296393159776926,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.004567171446979046,
+      -0.006394754163920879
+    ]
+  },
+  "timeline": {
+    "source": "meta/timeline/sync.parquet"
+  }
+}

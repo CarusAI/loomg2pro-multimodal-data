@@ -1,0 +1,68 @@
+{
+  "files": {
+    "left": "mocap/left.h5",
+    "right": "mocap/right.h5"
+  },
+  "skeleton_layout": [
+    20,
+    7
+  ],
+  "fields": {
+    "skeleton": {
+      "description": "Positions and orientations of 20 hand nodes in the SDK model frame.",
+      "shape": [
+        559,
+        20,
+        7
+      ],
+      "dtype": "float32",
+      "unit": [
+        "m",
+        "m",
+        "m",
+        "dimensionless",
+        "dimensionless",
+        "dimensionless",
+        "dimensionless"
+      ],
+      "component_order": [
+        "px",
+        "py",
+        "pz",
+        "qw",
+        "qx",
+        "qy",
+        "qz"
+      ],
+      "coordinate_frame": "mocap_model"
+    },
+    "wrist_quat": {
+      "description": "Orientation of SDK node 0 (palm/wrist root) relative to the SDK model frame; equivalent to skeleton[:, 0, 3:7].",
+      "shape": [
+        559,
+        4
+      ],
+      "dtype": "float32",
+      "unit": "dimensionless",
+      "component_order": [
+        "w",
+        "x",
+        "y",
+        "z"
+      ],
+      "coordinate_frame": "mocap_model"
+    }
+  },
+  "coordinate_frame": "mocap_model: mHandPro SDK model reference frame shared by both hands, initialized using WS_Geo; positions in meters.",
+  "calibration": {
+    "ppose_applied": null,
+    "apply_ppose_on_read": false,
+    "parameters": {
+      "left": null,
+      "right": null
+    }
+  },
+  "timeline": {
+    "source": "meta/timeline/sync.parquet"
+  }
+}

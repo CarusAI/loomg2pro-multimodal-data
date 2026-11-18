@@ -1,0 +1,30 @@
+{
+  "files": {
+    "data": "imu/head_imu.h5"
+  },
+  "fields": {
+    "aligned/orientation": {
+      "description": "Current IMU orientation relative to the first raw IMU sample of the episode.",
+      "shape": [
+        596,
+        4
+      ],
+      "dtype": "float64",
+      "unit": "dimensionless",
+      "component_order": [
+        "x",
+        "y",
+        "z",
+        "w"
+      ],
+      "from_frame": "imu_sensor_at_t",
+      "to_frame": "imu_sensor_at_first_raw_sample",
+      "rotation_convention": "Rotates vectors from the current IMU frame into the first raw IMU sample frame."
+    }
+  },
+  "coordinate_frame": "IMU sensor coordinate frame.",
+  "orientation_reference": "IMU frame at the first raw IMU sample of the episode.",
+  "timeline": {
+    "source": "meta/timeline/sync.parquet"
+  }
+}

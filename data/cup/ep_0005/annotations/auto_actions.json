@@ -1,0 +1,29 @@
+{
+  "actions": [
+    {
+      "label": "The cup is initially on the table.",
+      "start": 1,
+      "end": 131
+    },
+    {
+      "label": "The right hand grasps and lifts the cup.",
+      "start": 132,
+      "end": 263
+    },
+    {
+      "label": "Both hands hold the cup during the handover.",
+      "start": 264,
+      "end": 311
+    },
+    {
+      "label": "The right hand releases the cup; the left hand moves it to the target box.",
+      "start": 312,
+      "end": 451
+    },
+    {
+      "label": "The left hand releases the cup into the target box.",
+      "start": 452,
+      "end": 558
+    }
+  ]
+}
