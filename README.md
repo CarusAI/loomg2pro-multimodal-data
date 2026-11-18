@@ -1,4 +1,5 @@
-# LoomG2pro multimodal manipulation samples
+# LoomG2pro Multimodal Manipulation Samples
+
 
 Four human demonstrations of tabletop manipulation, one episode per object. Each recording combines five camera views with depth, hand motion, tactile responses and head orientation on a common 30 Hz timeline.
 
@@ -9,13 +10,17 @@ Four human demonstrations of tabletop manipulation, one episode per object. Each
 | Block | [ep_0002](data/block/ep_0002/) | 596 |
 | Cup | [ep_0005](data/cup/ep_0005/) | 559 |
 
-![Five camera views, depth and tactile traces from the apple demonstration](assets/apple-preview.jpg)
+
 
 ## Explore an episode
 
 Start with `camera/head_RGB.mp4` for the first-person view. The same folder holds stereo grayscale and wrist videos. The English action descriptions in `annotations/auto_actions.json` give inclusive start and end frame indices. Use `meta/timeline/sync.parquet` to locate the corresponding samples.
 
 Depth is stored in millimeters in `head_depth/`, with zero marking invalid pixels. The hand motion capture files in `mocap/` contain 20 nodes per hand. Head and hand trajectories in `world_pose/` use meters. Tactile values in `tactile/` are ADC readings. Apple has 1,132 channels per hand and the other three samples have 1,125. Consult each episode’s tactile layout before comparing channels.
+
+
+![Five camera views, depth and tactile traces from the apple demonstration](assets/apple-preview.jpg)
+
 
 ## Download
 
@@ -27,6 +32,8 @@ git clone https://github.com/CarusAI/loomg2pro-multimodal-data.git
 cd loomg2pro-multimodal-data
 git lfs pull
 ```
+
+
 
 ## Assessment scope
 
