@@ -2,6 +2,12 @@
 
 How does a person grasp an object, pass it between hands and release it at a target? These four tabletop demonstrations let you study the same movement through five camera views, depth, hand motion capture and tactile readings. English descriptions identify action intervals. All streams share a delivered 30 Hz frame index.
 
+## Try one episode and give feedback
+
+After [downloading the samples](#download), open the [banana handover walkthrough](data/banana/ep_0002/README.md). Frames 339–399 cover the interval when both hands hold the banana. Run the Python example from the episode directory. At frame 369, the distance between the two wrist anchors should be about **0.150 m**.
+
+Which experiment would you try with these samples? What data, labels or tools would help you run it? [Share feedback in a GitHub issue](https://github.com/CarusAI/loomg2pro-multimodal-data/issues/new). If you got stuck, include the episode, file and step so we can reproduce the problem.
+
 ## What can you model?
 
 | Research use | Inputs | Prediction or experiment |
@@ -26,6 +32,8 @@ Compare predicted wrist paths with the recorded paths using mean Euclidean error
 | Block | [ep_0002](data/block/ep_0002/) | 596 | Block handover, with both hands holding at frames 334–355 |
 | Cup | [ep_0005](data/cup/ep_0005/) | 559 | Cup handover, with both hands holding at frames 264–311 |
 
+![Five camera views, depth and tactile traces from the apple demonstration](assets/apple-preview.jpg)
+
 ## Explore an episode
 
 Start with `camera/head_RGB.mp4` for the first-person view. The same folder holds stereo grayscale and wrist videos. The English action descriptions in `annotations/auto_actions.json` give inclusive start and end frame indices. Use `meta/timeline/sync.parquet` to locate the corresponding samples.
@@ -35,8 +43,6 @@ Depth is stored in millimeters in `head_depth/`, with zero marking invalid pixel
 Head and hand positions in `world_pose/` are expressed in meters. The head IMU file, `imu/head_imu.h5`, stores one orientation quaternion per delivered frame in
 `aligned/orientation`, in `(x, y, z, w)` order. Each quaternion rotates vectors from the current IMU sensor frame into the sensor frame of the episode’s first
 raw IMU sample. Frame 0 has no valid orientation in any of the four samples.
-
-![Five camera views, depth and tactile traces from the apple demonstration](assets/apple-preview.jpg)
 
 ![Left and right hand motion capture skeletons with nodes numbered 0–19](assets/mocap_20_nodes_en.png)
 
